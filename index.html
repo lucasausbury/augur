@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" type="text/css" href="/css/main.min.css" />
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+	<script src="/js/bootstrap/util.js"></script>
+	<script src="/js/bootstrap/modal.js"></script>
+	<script src="/js/fontawesome/fontawesome-all.min.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+	<title>Amazon Book Category Analysis</title>
+</head><body>
+	<div class="container pt-4">
+		<div class="card-container">
+			<div class="card">
+				<div class="card-block">
+					<h1>An Analysis of Amazon's Book Categories</h1>
+					<p class="lead">An analysis of.....</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card-block">
+				<h3>Category structures</h3>
+				<div id="treemap"></div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-8">
+				<div class="card">
+					<div class="card-block">
+						<h3>Price vs sales rank in this category</h3>
+						<div class="custom-control custom-checkbox" style="float:right;">
+							<input type="checkbox" class="custom-control-input" id="log" checked>
+							<label class="custom-control-label" for="log">Use logarithmic scale</label>
+						</div>
+						<div class="clearfix"></div>
+						<div id="scatter"></div>
+					</div>
+				</div>
+			</div><div class="col-sm-4">
+				<div class="card">
+					<div class="card-block">
+						<h3>Category stats</h3>
+						<div id="stats"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="book_modal">
+		<div class="modal-dialog">
+			<div class="modal-content"></div>
+		</div>
+	</div>
+
+	<script src='/js/script.js'></script>
+</body>
+</html>

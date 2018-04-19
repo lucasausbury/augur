@@ -1,0 +1,105 @@
+body {
+	background-color:#eee;
+}
+.card {
+	margin-top: .75rem;
+	margin-bottom: .75rem;
+	background: #fff;
+	border: 1px solid #ebebeb;
+	box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;
+
+	.card-block {
+		padding:1.25rem;
+	}
+}
+h1, h2, h3, h4, h5, h6 {
+	color:$primary;
+}
+
+
+#treemap {
+	background:#fff;  
+	max-width: 100%;
+	overflow:auto;
+
+	.title {
+		font-weight:bold;
+		font-size:24px;
+		text-align:center;
+		margin-top:6px;
+		margin-bottom:6px;
+	}
+
+	text {
+		pointer-events: none;
+	}
+
+	.grandparent {
+		text {
+			font-weight: bold;
+		}
+
+		rect {
+			fill:orange;
+		}
+		&:hover rect {
+			fill: #ee9700;
+		}
+	}
+
+	rect {
+		fill:none;
+		stroke: #fff;
+	}
+
+	rect.parent, .grandparent rect {
+		stroke-width: 2px;
+	}
+
+	rect.parent {
+		pointer-events:none;
+	}
+	
+	.children rect.parent, .grandparent rect {
+		cursor: pointer;
+	}
+
+	.children rect.parent {
+		fill:#bbb;
+		fill-opacity: .5;
+	}
+
+	.children:hover rect.child {
+		fill: #bbb;
+	}
+
+
+
+	.children rect.child {
+		opacity: .5;
+	}
+	.children:hover rect.child {
+		opacity: 1;
+	}
+	.children .ptext {
+		opacity:0;
+	}
+}
+#box_whisker {
+	.box {
+		font:10px sans-serif;
+
+		line, rect, circle {
+			fill:#fff;
+			stroke:#000;
+			stroke-width:1.5px;
+		}
+		.center {
+			stroke-dasharray:3,3;
+		}
+		.outlier {
+			fill:none;
+			stroke:#ccc;
+		}
+	}
+}
