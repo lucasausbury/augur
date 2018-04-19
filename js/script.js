@@ -352,7 +352,7 @@ scatter = new function() {
 	}
 }*/
 
-d3.json("/data/categories.json", function(e, d) {
+d3.json("data/categories.json", function(e, d) {
 	if( !e )
 		treemap.init('treemap', d, {name:"Books", children:d, width:"auto"});
 });
@@ -383,7 +383,7 @@ function book_details() {
 		var value = augur.data.getValue(selectedItem.row, selectedItem.column);
 		
 		$.ajax({
-			url:'/book/', data:{categories:augur.cats,salesRank:value},
+			url:'book/', data:{categories:augur.cats,salesRank:value},
 			type:'post', cache:true,
 			error: function(error, e) {
 				alert(error.responseText);
@@ -454,7 +454,7 @@ function get_feed(categories, callback) {
 	data.categories = categories;
 
 	$.ajax({
-		url:'/feed/', data:data,
+		url:'feed/', data:data,
 		type:'post', cache:true,
 		error: function(error, e) {
 			alert(error.responseText);
